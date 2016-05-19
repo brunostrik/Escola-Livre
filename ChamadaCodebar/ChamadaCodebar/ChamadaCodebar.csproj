@@ -50,7 +50,18 @@
     <Compile Include="control\AlunoDAO.cs" />
     <Compile Include="control\ConnectionManager.cs" />
     <Compile Include="model\Aluno.cs" />
+    <Compile Include="model\Atuacao.cs" />
+    <Compile Include="model\DiaAula.cs" />
+    <Compile Include="model\DiaIntervencao.cs" />
+    <Compile Include="model\DiaSemAula.cs" />
+    <Compile Include="model\Epoca.cs" />
+    <Compile Include="model\Intervencao.cs" />
+    <Compile Include="model\MatriculaProjeto.cs" />
+    <Compile Include="model\Memorial.cs" />
     <Compile Include="model\Professor.cs" />
+    <Compile Include="model\Projeto.cs" />
+    <Compile Include="model\Registro.cs" />
+    <Compile Include="model\RegistroPresenca.cs" />
     <Compile Include="model\Usuario.cs" />
     <Compile Include="view\CadastroAluno.cs">
       <SubType>Form</SubType>

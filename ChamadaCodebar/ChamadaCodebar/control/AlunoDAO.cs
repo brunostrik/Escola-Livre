@@ -19,10 +19,10 @@ namespace ChamadaCodebar.control
             cmd.Parameters.Add("@Cartao", MySqlDbType.Int32);
             cmd.Parameters.Add("@Foto", MySqlDbType.MediumBlob);
             cmd.Parameters.Add("@Ativo", MySqlDbType.Bit);
-            cmd.Parameters["@Nome"].Value = a.nome;
-            cmd.Parameters["@Cartao"].Value = a.cartao;
-            cmd.Parameters["@Foto"].Value = a.foto;
-            cmd.Parameters["@Ativo"].Value = a.ativo;
+            cmd.Parameters["@Nome"].Value = a.Nome;
+            cmd.Parameters["@Cartao"].Value = a.Cartao;
+            cmd.Parameters["@Foto"].Value = a.Foto;
+            cmd.Parameters["@Ativo"].Value = a.Ativo;
             con.Open();
             int rowsAffected = cmd.ExecuteNonQuery();
             con.Close();

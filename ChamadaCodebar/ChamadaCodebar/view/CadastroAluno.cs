@@ -67,14 +67,14 @@ namespace ChamadaCodebar
             }
             //pode salvar, chama a funcao
             Aluno aluno = new Aluno();
-            aluno.nome = txtNome.Text.Trim();
-            aluno.cartao = Convert.ToInt32(nstCartao.Value);
+            aluno.Nome = txtNome.Text.Trim();
+            aluno.Cartao = Convert.ToInt32(nstCartao.Value);
             
             //Gerar a imagem em array de bytes
             string FileName = txtFoto.Text;
             FileStream fs = new FileStream(FileName, FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(fs);
-            aluno.foto = br.ReadBytes((int)fs.Length);
+            aluno.Foto = br.ReadBytes((int)fs.Length);
             br.Close();
             fs.Close();
             try
