@@ -40,6 +40,7 @@
             this.btnChamada.TabIndex = 0;
             this.btnChamada.Text = "Registro de Chamada via Cartão";
             this.btnChamada.UseVisualStyleBackColor = true;
+            this.btnChamada.Click += new System.EventHandler(this.btnChamada_Click);
             // 
             // btnCadastroAluno
             // 

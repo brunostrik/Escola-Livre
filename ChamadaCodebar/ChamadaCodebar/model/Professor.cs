@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace ChamadaCodebar.model
 {
-    public class Aluno
+    public class Professor
     {
-        public int Id { get; }
+        public int Id { get; set; }
         public string Nome { get; set; }
-        public int Cartao { get; set; }
-        public byte[] Foto { get; set; }
-        public bool Ativo { get; set; }
-        public DateTime DataNascimento { get; set; }
-        public DateTime DataCadastro { get; set; }
         public string Email { get; set; }
+        public DateTime DataCadastro { get; set; }
+        public bool Ativo { get; set; }
         public int IdUsuario { get; set; }
     }
 }

@@ -22,5 +22,10 @@ namespace ChamadaCodebar
             CadastroAluno cadastroAluno = new CadastroAluno();
             cadastroAluno.Show();
         }
+
+        private void btnChamada_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

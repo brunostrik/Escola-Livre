@@ -50,6 +50,8 @@
     <Compile Include="control\AlunoDAO.cs" />
     <Compile Include="control\ConnectionManager.cs" />
     <Compile Include="model\Aluno.cs" />
+    <Compile Include="model\Professor.cs" />
+    <Compile Include="model\Usuario.cs" />
     <Compile Include="view\CadastroAluno.cs">
       <SubType>Form</SubType>
     </Compile>
