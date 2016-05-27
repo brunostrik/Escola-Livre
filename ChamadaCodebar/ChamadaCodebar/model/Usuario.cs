@@ -12,5 +12,6 @@ namespace ChamadaCodebar.model
         public string Username { get; set; }
         public string Senha { get; set; }
         public DateTime UltimoAcesso { get; set; }
+        public int Tipo { get; set; } //0-Professor 1-Aluno
     }
 }

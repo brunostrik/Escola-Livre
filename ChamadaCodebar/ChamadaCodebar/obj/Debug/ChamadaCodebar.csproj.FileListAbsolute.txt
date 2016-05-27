@@ -10,3 +10,4 @@ C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCode
 C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\ChamadaCodebar.pdb
 C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\ChamadaCodebar.csprojResolveAssemblyReference.cache
 C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\bin\Debug\MySql.Data.dll
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\ChamadaCodebar.view.Login.resources

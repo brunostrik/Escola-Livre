@@ -8,7 +8,7 @@ namespace ChamadaCodebar.model
 {
     public class Aluno
     {
-        public int Id { get; }
+        public int Id { get; set; }
         public string Nome { get; set; }
         public int Cartao { get; set; }
         public byte[] Foto { get; set; }
