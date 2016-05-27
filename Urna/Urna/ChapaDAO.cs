@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace Urna
 {
@@ -55,7 +56,7 @@ namespace Urna
             cmd.Parameters.Add("@Numero", MySqlDbType.Int32);
             cmd.Parameters["@Numero"].Value = num;
             conn.Open();
-            MySqlDataReader dr = cmd.ExecuteReader();
+            MySqlDataReader dr = cmd.ExecuteReader();         
             Chapa c = null;
             if (dr.Read())
             {
@@ -66,32 +67,28 @@ namespace Urna
                 c.VicePresidente = dr.GetString("vice_presidente");
                 c.Relator = dr.GetString("relator");
                 c.ViceRelator = dr.GetString("vice_relator");
-                //c.FotoPresidente = dr.getString("foto_presidente");
-                //c.FotoVicePresidente = dr.GetString("presidente");
-                //c.FotoRelator = dr.GetString("presidente");
-                //c.FotoViceRelator = dr.GetString("presidente");
+                c.FotoPresidente = (byte[]) dr.GetValue(5);
+                c.FotoVicePresidente = (byte[])dr.GetValue(6);
+                c.FotoRelator = (byte[])dr.GetValue(7);
+                c.FotoViceRelator = (byte[])dr.GetValue(8);
             }
+            //OBTER FOTOS
             conn.Close();
             return c;
         }
         public int Cadastrar(Chapa c)
         {
             MySqlConnection conn = new MySqlConnection(CONNECTION_STRING);
-            string CmdString = "INSERT INTO chapas "+
-                "(numero, nome, presidente, vice_presidente, relator, vice_relator, "+
-                "foto_presidente, foto_vice_presidente, foto_relator, foto_vice_relator, votos) "+
-                "VALUES(@Numero, @Nome, @Presidente, @VicePresidente, @Relator, @ViceRelator "+
-                "@FotoPresidente, @FotoVicePresidente, @FotoRelator, @FotoViceRelator, @Votos)";
+            string CmdString = "INSERT INTO chapas " +
+                "(numero, nome, presidente, vice_presidente, relator, vice_relator, votos) " +
+                "VALUES(@Numero, @Nome, @Presidente, @VicePresidente, @Relator, @ViceRelator, @Votos)";
             MySqlCommand cmd = new MySqlCommand(CmdString, conn);
             cmd.Parameters.Add("@Numero", MySqlDbType.VarChar);
+            cmd.Parameters.Add("@Nome", MySqlDbType.VarChar);
             cmd.Parameters.Add("@Presidente", MySqlDbType.VarChar);
             cmd.Parameters.Add("@VicePresidente", MySqlDbType.VarChar);
             cmd.Parameters.Add("@Relator", MySqlDbType.VarChar);
-            cmd.Parameters.Add("@ViceRelator", MySqlDbType.VarChar);
-            cmd.Parameters.Add("@FotoPresidente", MySqlDbType.MediumBlob);
-            cmd.Parameters.Add("@FotoVicePresidente", MySqlDbType.MediumBlob);
-            cmd.Parameters.Add("@FotoRelator", MySqlDbType.MediumBlob);
-            cmd.Parameters.Add("@FotoViceRelator", MySqlDbType.MediumBlob);
+            cmd.Parameters.Add("@ViceRelator", MySqlDbType.VarChar);          
             cmd.Parameters.Add("@Votos", MySqlDbType.Int32);
             cmd.Parameters["@Numero"].Value = c.Numero;
             cmd.Parameters["@Nome"].Value = c.Nome;
@@ -99,14 +96,59 @@ namespace Urna
             cmd.Parameters["@VicePresidente"].Value = c.VicePresidente;
             cmd.Parameters["@Relator"].Value = c.Relator;
             cmd.Parameters["@ViceRelator"].Value = c.ViceRelator;
-            cmd.Parameters["@FotoPresidente"].Value = c.FotoPresidente;
-            cmd.Parameters["@FotoVicePresidente"].Value = c.FotoVicePresidente;
-            cmd.Parameters["@FotoRelator"].Value = c.FotoRelator;
-            cmd.Parameters["@FotoViceRelator"].Value = c.FotoViceRelator;
             cmd.Parameters["@Votos"].Value = c.Votos;
             conn.Open();
             int rowsAffected = cmd.ExecuteNonQuery();
             conn.Close();
+
+            //AGORA INSERIR A FOTO DO PRESIDENTE
+            conn = new MySqlConnection(CONNECTION_STRING);
+            CmdString = "UPDATE chapas SET foto_presidente = @Foto WHERE numero = @Numero";
+            cmd = new MySqlCommand(CmdString, conn);
+            cmd.Parameters.Add("@Foto", MySqlDbType.MediumBlob);
+            cmd.Parameters.Add("@Numero", MySqlDbType.VarChar);
+            cmd.Parameters["@Numero"].Value = c.Numero;
+            cmd.Parameters["@Foto"].Value = c.FotoPresidente;
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
+            //AGORA INSERIR A FOTO DO VICE PRESIDENTE
+            conn = new MySqlConnection(CONNECTION_STRING);
+            CmdString = "UPDATE chapas SET foto_vice_presidente = @Foto WHERE numero = @Numero";
+            cmd = new MySqlCommand(CmdString, conn);
+            cmd.Parameters.Add("@Foto", MySqlDbType.MediumBlob);
+            cmd.Parameters.Add("@Numero", MySqlDbType.VarChar);
+            cmd.Parameters["@Numero"].Value = c.Numero;
+            cmd.Parameters["@Foto"].Value = c.FotoVicePresidente;
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
+            //AGORA INSERIR A FOTO DO RELATOR
+            conn = new MySqlConnection(CONNECTION_STRING);
+            CmdString = "UPDATE chapas SET foto_relator = @Foto WHERE numero = @Numero";
+            cmd = new MySqlCommand(CmdString, conn);
+            cmd.Parameters.Add("@Foto", MySqlDbType.MediumBlob);
+            cmd.Parameters.Add("@Numero", MySqlDbType.VarChar);
+            cmd.Parameters["@Numero"].Value = c.Numero;
+            cmd.Parameters["@Foto"].Value = c.FotoRelator;
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
+            //AGORA INSERIR A FOTO DO VICE RELATOR
+            conn = new MySqlConnection(CONNECTION_STRING);
+            CmdString = "UPDATE chapas SET foto_vice_relator = @Foto WHERE numero = @Numero";
+            cmd = new MySqlCommand(CmdString, conn);
+            cmd.Parameters.Add("@Foto", MySqlDbType.MediumBlob);
+            cmd.Parameters.Add("@Numero", MySqlDbType.VarChar);
+            cmd.Parameters["@Numero"].Value = c.Numero;
+            cmd.Parameters["@Foto"].Value = c.FotoViceRelator;
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
             return rowsAffected;
         }
         public List<ApuracaoDTO> Resultado()

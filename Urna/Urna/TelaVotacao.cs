@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Urna
 {
@@ -58,17 +59,23 @@ namespace Urna
         }
         private void TratarDados(object sender, EventArgs e)
         {
-            //BIPE SIMPLES
+            
             Program.telaMesario.Logger("Tecla apertada");
             switch (rxString.Trim())
             {
                 case "A": //CONFIRMA
+                          //BIPE LONGO
+                    Bipe(2);
                     Confirma();
                     break;
                 case "B": //CORRIGE
+                          //BIPE SIMPLES
+                    Bipe(1);
                     Corrige();
                     break;                   
                 case "C": //BRANCO
+                          //BIPE SIMPLES
+                    Bipe(1);
                     Branco();
                     break;
                 case "0":
@@ -81,6 +88,8 @@ namespace Urna
                 case "7":
                 case "8":
                 case "9":
+                    //BIPE SIMPLES
+                    Bipe(1);
                     Numero(rxString.Trim());
                     break;           
             }
@@ -96,8 +105,7 @@ namespace Urna
                 return;
             }
             Program.telaMesario.Logger("Voto computado com suceso");
-            //MOSTRA MENSAGEM FIM NA TELA
-            //BIPE LONGO
+            
             Corrige();
 
             boxRodape.Visible = false;
@@ -120,10 +128,6 @@ namespace Urna
             lblRelator.Visible = false;
             lblVR.Visible = false;
             lblViceRelator.Visible = false;
-
-
-
-
             lblFim.Visible = true;
         }
         private void Corrige()
@@ -194,6 +198,19 @@ namespace Urna
                 txtNumero.Text = string.Empty;
             }
 
+        }
+        private void Bipe(int tipo)
+        {
+            SoundPlayer bipe;
+            if (tipo == 1) //Simples
+            {
+                bipe = new SoundPlayer(@"C:\Users\Bruno Strik\Music\BipeUrna.wav");
+            }
+            else //FIM
+            {
+                bipe = new SoundPlayer(@"C:\Users\Bruno Strik\Music\BipeFinalUrna.wav");
+            }
+            bipe.Play();
         }
     }
 }
