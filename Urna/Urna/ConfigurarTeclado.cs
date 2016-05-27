@@ -103,6 +103,12 @@ namespace Urna
         private void button3_Click(object sender, EventArgs e)
         {
             Program.SerialArduino = cmbPortas.SelectedItem.ToString();
+            Program.Mensagem("Teclado configurado na porta " + Program.SerialArduino);
+            if (serialPort.IsOpen)
+            {
+                serialPort.Close();
+            }
+            this.Close();
         }
     }
 }

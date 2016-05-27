@@ -23,11 +23,22 @@ namespace Urna
             if (txtSenha.Text != Program.Senha)
             {
                 Program.Erro("Senha incorreta");
+                txtSenha.Text = string.Empty;
+                txtSenha.Focus();
                 return;
             }
+            txtSenha.Text = string.Empty;
             //Senha correta, carregar os resultados
             dataGridView.DataSource = new ChapaDAO().Resultado();
             dataGridView.Refresh();
+        }
+
+        private void txtSenha_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click(null, null);
+            }
         }
     }
 }

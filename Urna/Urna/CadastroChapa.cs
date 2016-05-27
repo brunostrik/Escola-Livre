@@ -72,7 +72,7 @@ namespace Urna
             //Se chegou a este ponto validou tudo certo
             //Constroi a entidade
             Chapa c = new Chapa();
-            c.Numero = Convert.ToInt32(txtNumero.Value);
+            c.Numero = txtNumero.Value.ToString().Trim();
             c.Nome = txtNome.Text.Trim();
             c.Presidente = txtPresidente.Text.Trim();
             c.VicePresidente = txtVicePresidente.Text.Trim();

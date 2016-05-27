@@ -20,7 +20,7 @@ namespace Urna
         }
 
         public static string SerialArduino = "";
-        public static string Senha = "asd";
+        public static string Senha = "jabuticaba";
         public static TelaMesario telaMesario;
         public static TelaVotacao telaVotacao;
 

@@ -13,12 +13,12 @@ namespace Urna
                                                     "Database=urna;" +
                                                     "Uid=root;" +
                                                     "Pwd=;";
-        public int Votar (int Numero)
+        public int Votar (string Numero)
         {
             MySqlConnection conn = new MySqlConnection(CONNECTION_STRING);
             string cmdString = "UPDATE chapas SET votos = votos + 1 WHERE numero = @Numero";
             MySqlCommand cmd = new MySqlCommand(cmdString, conn);
-            cmd.Parameters.Add("@Numero", MySqlDbType.Int32);
+            cmd.Parameters.Add("@Numero", MySqlDbType.VarChar);
             cmd.Parameters["@Numero"].Value = Numero;
             conn.Open();
             int rowsAffected = cmd.ExecuteNonQuery();
@@ -45,6 +45,35 @@ namespace Urna
             conn.Close();
             return rowsAffected;
         }
+        public Chapa CarregarChapa(string num)
+        {
+            MySqlConnection conn = new MySqlConnection(CONNECTION_STRING);
+            string cmdString = "SELECT nome, presidente, vice_presidente, relator, vice_relator, "+
+                "foto_presidente, foto_vice_presidente, foto_relator, foto_vice_relator FROM chapas "+
+                "WHERE numero = @Numero";
+            MySqlCommand cmd = new MySqlCommand(cmdString, conn);
+            cmd.Parameters.Add("@Numero", MySqlDbType.Int32);
+            cmd.Parameters["@Numero"].Value = num;
+            conn.Open();
+            MySqlDataReader dr = cmd.ExecuteReader();
+            Chapa c = null;
+            if (dr.Read())
+            {
+                c = new Chapa();
+                c.Numero = num;
+                c.Nome = dr.GetString("nome");
+                c.Presidente = dr.GetString("presidente");
+                c.VicePresidente = dr.GetString("vice_presidente");
+                c.Relator = dr.GetString("relator");
+                c.ViceRelator = dr.GetString("vice_relator");
+                //c.FotoPresidente = dr.getString("foto_presidente");
+                //c.FotoVicePresidente = dr.GetString("presidente");
+                //c.FotoRelator = dr.GetString("presidente");
+                //c.FotoViceRelator = dr.GetString("presidente");
+            }
+            conn.Close();
+            return c;
+        }
         public int Cadastrar(Chapa c)
         {
             MySqlConnection conn = new MySqlConnection(CONNECTION_STRING);
@@ -54,7 +83,7 @@ namespace Urna
                 "VALUES(@Numero, @Nome, @Presidente, @VicePresidente, @Relator, @ViceRelator "+
                 "@FotoPresidente, @FotoVicePresidente, @FotoRelator, @FotoViceRelator, @Votos)";
             MySqlCommand cmd = new MySqlCommand(CmdString, conn);
-            cmd.Parameters.Add("@Numero", MySqlDbType.Int32);
+            cmd.Parameters.Add("@Numero", MySqlDbType.VarChar);
             cmd.Parameters.Add("@Presidente", MySqlDbType.VarChar);
             cmd.Parameters.Add("@VicePresidente", MySqlDbType.VarChar);
             cmd.Parameters.Add("@Relator", MySqlDbType.VarChar);

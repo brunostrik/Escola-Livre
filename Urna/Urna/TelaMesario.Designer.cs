@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnLiberar = new System.Windows.Forms.Button();
-            this.btnFinalizar = new System.Windows.Forms.Button();
+            this.btnAtivar = new System.Windows.Forms.Button();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnForcar = new System.Windows.Forms.Button();
+            this.btnFinalizar = new System.Windows.Forms.Button();
+            this.btnLiberar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtLog = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.btnAtivar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -56,16 +56,45 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Controles";
             // 
-            // btnLiberar
+            // btnAtivar
             // 
-            this.btnLiberar.Enabled = false;
-            this.btnLiberar.Location = new System.Drawing.Point(5, 55);
-            this.btnLiberar.Name = "btnLiberar";
-            this.btnLiberar.Size = new System.Drawing.Size(155, 23);
-            this.btnLiberar.TabIndex = 0;
-            this.btnLiberar.Text = "Liberar urna para votação";
-            this.btnLiberar.UseVisualStyleBackColor = true;
-            this.btnLiberar.Click += new System.EventHandler(this.btnLiberar_Click);
+            this.btnAtivar.Location = new System.Drawing.Point(366, 15);
+            this.btnAtivar.Name = "btnAtivar";
+            this.btnAtivar.Size = new System.Drawing.Size(115, 23);
+            this.btnAtivar.TabIndex = 6;
+            this.btnAtivar.Text = "Ativar";
+            this.btnAtivar.UseVisualStyleBackColor = true;
+            this.btnAtivar.Click += new System.EventHandler(this.btnAtivar_Click);
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.Location = new System.Drawing.Point(51, 17);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(307, 20);
+            this.txtSenha.TabIndex = 5;
+            this.txtSenha.UseSystemPasswordChar = true;
+            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
+            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSenha_KeyDown);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Senha";
+            // 
+            // btnForcar
+            // 
+            this.btnForcar.Enabled = false;
+            this.btnForcar.Location = new System.Drawing.Point(166, 55);
+            this.btnForcar.Name = "btnForcar";
+            this.btnForcar.Size = new System.Drawing.Size(155, 23);
+            this.btnForcar.TabIndex = 3;
+            this.btnForcar.Text = "Finalizar votação atual";
+            this.btnForcar.UseVisualStyleBackColor = true;
+            this.btnForcar.Click += new System.EventHandler(this.btnForcar_Click);
             // 
             // btnFinalizar
             // 
@@ -78,16 +107,16 @@
             this.btnFinalizar.UseVisualStyleBackColor = true;
             this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
-            // btnForcar
+            // btnLiberar
             // 
-            this.btnForcar.Enabled = false;
-            this.btnForcar.Location = new System.Drawing.Point(166, 55);
-            this.btnForcar.Name = "btnForcar";
-            this.btnForcar.Size = new System.Drawing.Size(155, 23);
-            this.btnForcar.TabIndex = 3;
-            this.btnForcar.Text = "Forçar fim da votação atual";
-            this.btnForcar.UseVisualStyleBackColor = true;
-            this.btnForcar.Click += new System.EventHandler(this.btnForcar_Click);
+            this.btnLiberar.Enabled = false;
+            this.btnLiberar.Location = new System.Drawing.Point(5, 55);
+            this.btnLiberar.Name = "btnLiberar";
+            this.btnLiberar.Size = new System.Drawing.Size(155, 23);
+            this.btnLiberar.TabIndex = 0;
+            this.btnLiberar.Text = "Liberar urna para votação";
+            this.btnLiberar.UseVisualStyleBackColor = true;
+            this.btnLiberar.Click += new System.EventHandler(this.btnLiberar_Click);
             // 
             // groupBox2
             // 
@@ -107,33 +136,6 @@
             this.txtLog.Name = "txtLog";
             this.txtLog.Size = new System.Drawing.Size(476, 311);
             this.txtLog.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Senha";
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.Location = new System.Drawing.Point(51, 17);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(307, 20);
-            this.txtSenha.TabIndex = 5;
-            this.txtSenha.UseSystemPasswordChar = true;
-            // 
-            // btnAtivar
-            // 
-            this.btnAtivar.Location = new System.Drawing.Point(366, 15);
-            this.btnAtivar.Name = "btnAtivar";
-            this.btnAtivar.Size = new System.Drawing.Size(115, 23);
-            this.btnAtivar.TabIndex = 6;
-            this.btnAtivar.Text = "Ativar";
-            this.btnAtivar.UseVisualStyleBackColor = true;
-            this.btnAtivar.Click += new System.EventHandler(this.btnAtivar_Click);
             // 
             // TelaMesario
             // 
