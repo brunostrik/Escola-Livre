@@ -38,7 +38,7 @@ namespace Urna
             else
             {
                 RetornaBtn();
-                Program.telaVotacao.Close();
+                try { Program.telaVotacao.Close(); } catch { }
             }
         }
         private void RetornaBtn()

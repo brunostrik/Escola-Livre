@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using System.IO;
 
 namespace Urna
 {
@@ -175,6 +176,29 @@ namespace Urna
                 lblVicePresidente.Text = c.VicePresidente;
                 lblRelator.Text = c.Relator;
                 lblViceRelator.Text = c.ViceRelator;
+
+                //IMAGENS
+                MemoryStream ms;
+                if (c.FotoPresidente != null)
+                {
+                    ms = new MemoryStream(c.FotoPresidente);
+                    picPresidente.Image = Image.FromStream(ms);
+                }
+                if (c.FotoVicePresidente != null)
+                {
+                    ms = new MemoryStream(c.FotoVicePresidente);
+                    picVicePresidente.Image = Image.FromStream(ms);
+                }
+                if (c.FotoRelator != null)
+                {
+                    ms = new MemoryStream(c.FotoRelator);
+                    picRelator.Image = Image.FromStream(ms);
+                }
+                if (c.FotoViceRelator != null)
+                {
+                    ms = new MemoryStream(c.FotoViceRelator);
+                    picViceRelator.Image = Image.FromStream(ms);
+                }
                 if (c.Nome == "NULO")
                 {
                     txtNumero.Text = "N";

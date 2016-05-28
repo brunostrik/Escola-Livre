@@ -66,14 +66,32 @@ namespace Urna
                 c.Presidente = dr.GetString("presidente");
                 c.VicePresidente = dr.GetString("vice_presidente");
                 c.Relator = dr.GetString("relator");
-                c.ViceRelator = dr.GetString("vice_relator");
-                c.FotoPresidente = (byte[]) dr.GetValue(5);
-                c.FotoVicePresidente = (byte[])dr.GetValue(6);
-                c.FotoRelator = (byte[])dr.GetValue(7);
-                c.FotoViceRelator = (byte[])dr.GetValue(8);
+                c.ViceRelator = dr.GetString("vice_relator");               
             }
             //OBTER FOTOS
             conn.Close();
+            return CarregarFotos(c);
+        }
+        public Chapa CarregarFotos(Chapa c)
+        {
+            if (c != null)
+            {
+                MySqlConnection conn = new MySqlConnection(CONNECTION_STRING);
+                string CmdString = "SELECT foto_presidente, foto_vice_presidente, " +
+                    "foto_relator, foto_vice_relator FROM chapas WHERE numero = @Numero";
+                MySqlCommand cmd = new MySqlCommand(CmdString, conn);
+                cmd.Parameters.Add("@Numero", MySqlDbType.VarChar);
+                cmd.Parameters["@Numero"].Value = c.Numero;
+                conn.Open();
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                c.FotoPresidente = (byte[])dt.Rows[0][0];
+                c.FotoVicePresidente = (byte[])dt.Rows[0][1];
+                c.FotoRelator = (byte[])dt.Rows[0][2];
+                c.FotoViceRelator = (byte[])dt.Rows[0][3];
+                conn.Close();
+            }
             return c;
         }
         public int Cadastrar(Chapa c)

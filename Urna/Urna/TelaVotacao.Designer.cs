@@ -300,6 +300,7 @@
             this.picVicePresidente.Location = new System.Drawing.Point(526, 175);
             this.picVicePresidente.Name = "picVicePresidente";
             this.picVicePresidente.Size = new System.Drawing.Size(110, 141);
+            this.picVicePresidente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picVicePresidente.TabIndex = 13;
             this.picVicePresidente.TabStop = false;
             // 
@@ -309,6 +310,7 @@
             this.picViceRelator.Location = new System.Drawing.Point(642, 175);
             this.picViceRelator.Name = "picViceRelator";
             this.picViceRelator.Size = new System.Drawing.Size(110, 141);
+            this.picViceRelator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picViceRelator.TabIndex = 12;
             this.picViceRelator.TabStop = false;
             // 
@@ -318,6 +320,7 @@
             this.picPresidente.Location = new System.Drawing.Point(526, 28);
             this.picPresidente.Name = "picPresidente";
             this.picPresidente.Size = new System.Drawing.Size(110, 141);
+            this.picPresidente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picPresidente.TabIndex = 11;
             this.picPresidente.TabStop = false;
             // 
@@ -327,6 +330,7 @@
             this.picRelator.Location = new System.Drawing.Point(642, 28);
             this.picRelator.Name = "picRelator";
             this.picRelator.Size = new System.Drawing.Size(110, 141);
+            this.picRelator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picRelator.TabIndex = 10;
             this.picRelator.TabStop = false;
             // 
