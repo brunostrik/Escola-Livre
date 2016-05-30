@@ -5,11 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.IO;
 
 namespace Urna
 {
     public class ChapaDAO
     {
+        private const string path = @"C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Urna\Urna\bin\Release\Votos.txt";
         private const string CONNECTION_STRING = "Server=127.0.0.1;" +
                                                     "Database=urna;" +
                                                     "Uid=root;" +
@@ -24,8 +26,44 @@ namespace Urna
             conn.Open();
             int rowsAffected = cmd.ExecuteNonQuery();
             conn.Close();
+            //Gravar voto em arquivo como backup
+            VotarArquivo(Numero);
             return rowsAffected;
         }
+        public void VotarArquivo(string numero)
+        {
+            if (!File.Exists(path))
+            {
+                // Create a file to write to.
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    sw.WriteLine("VOTOS");
+                }
+            }
+            // This text is always added, making the file longer over time
+            // if it is not deleted.
+            using (StreamWriter sw = File.AppendText(path))
+            {
+                sw.WriteLine(numero);
+            }
+        }
+        public void DeletarArquivo()
+        {
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+        }
+        public void ZerarBd()
+        {
+            MySqlConnection conn = new MySqlConnection(CONNECTION_STRING);
+            string cmdString = "UPDATE chapas SET votos = 0";
+            MySqlCommand cmd = new MySqlCommand(cmdString, conn);
+            conn.Open();
+            int rowsAffected = cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+        /*
         public int VotarNulo()
         {
             MySqlConnection conn = new MySqlConnection(CONNECTION_STRING);
@@ -46,6 +84,7 @@ namespace Urna
             conn.Close();
             return rowsAffected;
         }
+        */
         public Chapa CarregarChapa(string num)
         {
             MySqlConnection conn = new MySqlConnection(CONNECTION_STRING);

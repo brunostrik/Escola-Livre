@@ -20,7 +20,7 @@ namespace Urna
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtSenha.Text != Program.Senha)
+            if (txtSenha.Text != Program.SenhaSupervisor)
             {
                 Program.Erro("Senha incorreta");
                 txtSenha.Text = string.Empty;
@@ -39,6 +39,36 @@ namespace Urna
             {
                 button1_Click(null, null);
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (txtSenha.Text != Program.SenhaSupervisor)
+            {
+                Program.Erro("Senha incorreta");
+                txtSenha.Text = string.Empty;
+                txtSenha.Focus();
+                return;
+            }
+            txtSenha.Text = string.Empty;
+            new ChapaDAO().VotarArquivo("N");
+            Program.Mensagem("Arquivo criado, conferir por gentileza.");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (txtSenha.Text != Program.SenhaSupervisor)
+            {
+                Program.Erro("Senha incorreta");
+                txtSenha.Text = string.Empty;
+                txtSenha.Focus();
+                return;
+            }
+            txtSenha.Text = string.Empty;
+            if (!Program.Pergunta("Tem certeza? Todos os votos serão perdidos")) return;
+            ChapaDAO cd = new ChapaDAO();
+            cd.DeletarArquivo();
+            cd.ZerarBd();
         }
     }
 }
