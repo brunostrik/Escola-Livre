@@ -13,3 +13,5 @@ C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Urna\Urna\o
 C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Urna\Urna\obj\Release\Urna.exe
 C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Urna\Urna\obj\Release\Urna.pdb
 C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Urna\Urna\obj\Release\Urna.csprojResolveAssemblyReference.cache
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Urna\Urna\obj\Release\Urna.GeraSenha.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Urna\Urna\obj\Release\Urna.GeraSenhaMesario.resources

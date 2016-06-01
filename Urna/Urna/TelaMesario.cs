@@ -21,7 +21,7 @@ namespace Urna
         {
             if (btnAtivar.Text == "Ativar")
             {
-                if (txtSenha.Text != Program.Senha)
+                if (txtSenha.Text != new SenhaDAO().ObterSenhaMesario())
                 {
                     Program.Erro("Senha incorreta");
                     txtSenha.Focus();
@@ -47,6 +47,7 @@ namespace Urna
             btnFinalizar.Enabled = false;
             btnForcar.Enabled = false;
             btnLiberar.Enabled = false;
+            btnAtivar.Enabled = true;
             btnAtivar.Text = "Ativar";
         }
         public void Logger(String texto)
@@ -63,6 +64,7 @@ namespace Urna
             btnLiberar.Enabled = false;
             btnFinalizar.Enabled = false;
             btnForcar.Enabled = true;
+            btnAtivar.Enabled = false;
             Program.telaVotacao.Show();
         }
 
@@ -93,6 +95,15 @@ namespace Urna
             if (e.KeyCode == Keys.Enter)
             {
                 btnAtivar_Click(null, null);
+            }
+        }
+
+        private void TelaMesario_Load(object sender, EventArgs e)
+        {
+            if (Program.SerialArduino.Length == 0)
+            {
+                Program.Erro("A porta serial ainda não foi configurada, verifique");
+                this.Close();
             }
         }
     }

@@ -42,5 +42,13 @@ namespace Urna
         {
             new Apuracao().ShowDialog();
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            if (!new SenhaDAO().TesteBD())
+            {
+                Application.Exit();
+            }
+        }
     }
 }

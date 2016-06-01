@@ -61,7 +61,7 @@
             this.btnAtivar.Location = new System.Drawing.Point(366, 15);
             this.btnAtivar.Name = "btnAtivar";
             this.btnAtivar.Size = new System.Drawing.Size(115, 23);
-            this.btnAtivar.TabIndex = 6;
+            this.btnAtivar.TabIndex = 2;
             this.btnAtivar.Text = "Ativar";
             this.btnAtivar.UseVisualStyleBackColor = true;
             this.btnAtivar.Click += new System.EventHandler(this.btnAtivar_Click);
@@ -71,7 +71,7 @@
             this.txtSenha.Location = new System.Drawing.Point(51, 17);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(307, 20);
-            this.txtSenha.TabIndex = 5;
+            this.txtSenha.TabIndex = 1;
             this.txtSenha.UseSystemPasswordChar = true;
             this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSenha_KeyDown);
@@ -91,7 +91,7 @@
             this.btnForcar.Location = new System.Drawing.Point(166, 55);
             this.btnForcar.Name = "btnForcar";
             this.btnForcar.Size = new System.Drawing.Size(155, 23);
-            this.btnForcar.TabIndex = 3;
+            this.btnForcar.TabIndex = 4;
             this.btnForcar.Text = "Finalizar votação atual";
             this.btnForcar.UseVisualStyleBackColor = true;
             this.btnForcar.Click += new System.EventHandler(this.btnForcar_Click);
@@ -102,7 +102,7 @@
             this.btnFinalizar.Location = new System.Drawing.Point(327, 55);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(154, 23);
-            this.btnFinalizar.TabIndex = 2;
+            this.btnFinalizar.TabIndex = 5;
             this.btnFinalizar.Text = "Finalizar eleição";
             this.btnFinalizar.UseVisualStyleBackColor = true;
             this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
@@ -113,7 +113,7 @@
             this.btnLiberar.Location = new System.Drawing.Point(5, 55);
             this.btnLiberar.Name = "btnLiberar";
             this.btnLiberar.Size = new System.Drawing.Size(155, 23);
-            this.btnLiberar.TabIndex = 0;
+            this.btnLiberar.TabIndex = 3;
             this.btnLiberar.Text = "Liberar urna para votação";
             this.btnLiberar.UseVisualStyleBackColor = true;
             this.btnLiberar.Click += new System.EventHandler(this.btnLiberar_Click);
@@ -134,6 +134,7 @@
             this.txtLog.Location = new System.Drawing.Point(7, 20);
             this.txtLog.Multiline = true;
             this.txtLog.Name = "txtLog";
+            this.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtLog.Size = new System.Drawing.Size(476, 311);
             this.txtLog.TabIndex = 0;
             // 
@@ -147,6 +148,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "TelaMesario";
             this.Text = "Tela do Mesário - Acompanhamento da Votação";
+            this.Load += new System.EventHandler(this.TelaMesario_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

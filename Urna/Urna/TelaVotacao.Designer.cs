@@ -345,6 +345,7 @@
             this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.boxVotacao);
             this.Controls.Add(this.boxRodape);
+            this.Cursor = System.Windows.Forms.Cursors.No;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaVotacao";
             this.Text = "TelaVotacao";

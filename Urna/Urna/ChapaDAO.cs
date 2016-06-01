@@ -12,7 +12,7 @@ namespace Urna
     public class ChapaDAO
     {
         private const string path = @"C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Urna\Urna\bin\Release\Votos.txt";
-        private const string CONNECTION_STRING = "Server=127.0.0.1;" +
+        public static string CONNECTION_STRING = "Server=127.0.0.1;" +
                                                     "Database=urna;" +
                                                     "Uid=root;" +
                                                     "Pwd=;";

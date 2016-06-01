@@ -44,8 +44,8 @@
             this.button1.Location = new System.Drawing.Point(168, 139);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Apuração dos Votos";
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Menu da Comissão";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -104,7 +104,7 @@
             this.button5.Location = new System.Drawing.Point(315, 139);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(141, 23);
-            this.button5.TabIndex = 8;
+            this.button5.TabIndex = 4;
             this.button5.Text = "Configurar Teclado";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -136,6 +136,7 @@
             this.MaximizeBox = false;
             this.Name = "Menu";
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

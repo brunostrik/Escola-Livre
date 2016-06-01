@@ -13,3 +13,5 @@ C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Urna\Urna\o
 C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Urna\Urna\obj\Debug\Urna.Apuracao.resources
 C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Urna\Urna\obj\Debug\Urna.TelaMesario.resources
 C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Urna\Urna\obj\Debug\Urna.TelaVotacao.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Urna\Urna\obj\Debug\Urna.GeraSenha.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Urna\Urna\obj\Debug\Urna.GeraSenhaMesario.resources
