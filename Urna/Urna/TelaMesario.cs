@@ -77,12 +77,15 @@ namespace Urna
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
-            Logger("Eleição Finalizada");
-            try { Program.telaVotacao.Close(); } catch { }
-            RetornaBtn();
-            btnAtivar.Enabled = false;
-            txtSenha.Enabled = false;
-            
+            if (Program.Pergunta("Tem certeza?"))
+            {
+                Logger("Eleição Finalizada");
+                try { Program.telaVotacao.Close(); } catch { }
+                RetornaBtn();
+                btnAtivar.Enabled = false;
+                txtSenha.Enabled = false;
+                this.Close();
+            }
         }
 
         private void txtSenha_TextChanged(object sender, EventArgs e)
