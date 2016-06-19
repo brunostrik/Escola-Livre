@@ -1,0 +1,13 @@
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\bin\Debug\ChamadaCodebar.exe.config
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\bin\Debug\ChamadaCodebar.exe
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\bin\Debug\ChamadaCodebar.pdb
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\ChamadaCodebar.CadastroAluno.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\ChamadaCodebar.ChamadaCartao.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\ChamadaCodebar.MainWindow.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\ChamadaCodebar.Properties.Resources.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\ChamadaCodebar.csproj.GenerateResource.Cache
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\ChamadaCodebar.exe
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\ChamadaCodebar.pdb
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\ChamadaCodebar.csprojResolveAssemblyReference.cache
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\bin\Debug\MySql.Data.dll
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\ChamadaCodebar.view.Login.resources

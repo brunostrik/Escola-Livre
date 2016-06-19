@@ -1,0 +1,12 @@
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\obj\Debug\AutoChamada.csprojResolveAssemblyReference.cache
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\obj\Debug\AutoChamada.Properties.Resources.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\obj\Debug\Sinatra.Reader.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\obj\Debug\AutoChamada.csproj.GenerateResource.Cache
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\bin\Debug\AutoChamada.exe.config
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\bin\Debug\AutoChamada.exe
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\bin\Debug\AutoChamada.pdb
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\obj\Debug\AutoChamada.exe
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\obj\Debug\AutoChamada.pdb
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\bin\Debug\MySql.Data.dll
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\bin\Debug\EscolaLivre.pdb
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\bin\Debug\EscolaLivre.exe

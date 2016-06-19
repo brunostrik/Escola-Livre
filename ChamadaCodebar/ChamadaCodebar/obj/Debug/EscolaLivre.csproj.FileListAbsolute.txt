@@ -1,0 +1,9 @@
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\EscolaLivre.csprojResolveAssemblyReference.cache
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\ChamadaCodebar.CadastroAluno.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\ChamadaCodebar.ChamadaCartao.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\ChamadaCodebar.view.Login.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\ChamadaCodebar.MainWindow.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\EscolaLivre.Properties.Resources.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\EscolaLivre.csproj.GenerateResource.Cache
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\EscolaLivre.CadastroAluno.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\ChamadaCodebar\ChamadaCodebar\obj\Debug\ChamadaCodebar.Login.resources

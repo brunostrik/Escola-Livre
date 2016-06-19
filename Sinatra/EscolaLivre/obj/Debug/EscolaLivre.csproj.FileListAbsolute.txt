@@ -1,0 +1,15 @@
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\EscolaLivre\bin\Debug\EscolaLivre.pdb
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\EscolaLivre\obj\Debug\EscolaLivre.csprojResolveAssemblyReference.cache
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\EscolaLivre\obj\Debug\EscolaLivre.Properties.Resources.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\EscolaLivre\obj\Debug\EscolaLivre.csproj.GenerateResource.Cache
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\EscolaLivre\obj\Debug\EscolaLivre.pdb
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\EscolaLivre\bin\Debug\MySql.Data.dll
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\EscolaLivre\bin\Debug\EscolaLivre.exe.config
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\EscolaLivre\bin\Debug\EscolaLivre.exe
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\EscolaLivre\obj\Debug\EscolaLivre.exe
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\EscolaLivre\obj\Debug\EscolaLivre.view.MainWindow.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\EscolaLivre\obj\Debug\EscolaLivre.view.LoginForm.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\EscolaLivre\obj\Debug\EscolaLivre.view.TrocarSenhaForm.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\EscolaLivre\obj\Debug\EscolaLivre.view.CadastroProfessorForm.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\EscolaLivre\obj\Debug\EscolaLivre.view.CadastroUsuarioForm.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\EscolaLivre\obj\Debug\EscolaLivre.view.CadastroAlunoForm.resources

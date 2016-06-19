@@ -1,0 +1,10 @@
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\bin\Debug\Sinatra.exe.config
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\obj\Debug\Sinatra.csprojResolveAssemblyReference.cache
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\obj\Debug\Sinatra.Properties.Resources.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\obj\Debug\Sinatra.Reader.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\obj\Debug\Sinatra.csproj.GenerateResource.Cache
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\bin\Debug\Sinatra.exe
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\bin\Debug\Sinatra.pdb
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\obj\Debug\Sinatra.exe
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\obj\Debug\Sinatra.pdb
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Sinatra\bin\Debug\AutoChamada.exe.config
