@@ -34,11 +34,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtSenha1 = new System.Windows.Forms.TextBox();
-            this.txtSenha2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtSenha2 = new System.Windows.Forms.TextBox();
+            this.txtSenha1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,41 +92,6 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
-            // txtSenha1
-            // 
-            this.txtSenha1.Location = new System.Drawing.Point(114, 74);
-            this.txtSenha1.Name = "txtSenha1";
-            this.txtSenha1.Size = new System.Drawing.Size(218, 20);
-            this.txtSenha1.TabIndex = 4;
-            this.txtSenha1.UseSystemPasswordChar = true;
-            // 
-            // txtSenha2
-            // 
-            this.txtSenha2.Location = new System.Drawing.Point(114, 100);
-            this.txtSenha2.Name = "txtSenha2";
-            this.txtSenha2.Size = new System.Drawing.Size(218, 20);
-            this.txtSenha2.TabIndex = 5;
-            this.txtSenha2.UseSystemPasswordChar = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(274, 154);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(80, 23);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Tipo";
-            // 
             // cmbTipo
             // 
             this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -138,6 +103,42 @@
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(218, 21);
             this.cmbTipo.TabIndex = 7;
+            this.cmbTipo.SelectedIndexChanged += new System.EventHandler(this.cmbTipo_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(80, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(28, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Tipo";
+            // 
+            // txtSenha2
+            // 
+            this.txtSenha2.Location = new System.Drawing.Point(114, 100);
+            this.txtSenha2.Name = "txtSenha2";
+            this.txtSenha2.Size = new System.Drawing.Size(218, 20);
+            this.txtSenha2.TabIndex = 5;
+            this.txtSenha2.UseSystemPasswordChar = true;
+            // 
+            // txtSenha1
+            // 
+            this.txtSenha1.Location = new System.Drawing.Point(114, 74);
+            this.txtSenha1.Name = "txtSenha1";
+            this.txtSenha1.Size = new System.Drawing.Size(218, 20);
+            this.txtSenha1.TabIndex = 4;
+            this.txtSenha1.UseSystemPasswordChar = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(274, 154);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Salvar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CadastroUsuarioForm
             // 

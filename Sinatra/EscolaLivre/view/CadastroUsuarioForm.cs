@@ -82,7 +82,15 @@ namespace EscolaLivre.view
 
         private void CadastroUsuarioForm_Load(object sender, EventArgs e)
         {
-            cmbTipo.SelectedIndex = 0;
+            if (cmbTipo.SelectedIndex < 0)
+            {
+                cmbTipo.SelectedIndex = 0;
+            }
+        }
+
+        private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

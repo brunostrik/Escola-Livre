@@ -83,5 +83,42 @@ namespace EscolaLivre
                 return 0;
             }
         }
+        public int Atualizar(Professor p)
+        {
+            MySqlConnection con = ConnectionManager.getConnection();
+            string CmdString = "UPDATE professor SET nome = @Nome, email = @Email, ativo = @Ativo, id_usuario = @Usuario) " +
+                                "WHERE id = @Id";
+            MySqlCommand cmd = new MySqlCommand(CmdString, con);
+            cmd.Parameters.Add("@Nome", MySqlDbType.VarChar);
+            cmd.Parameters.Add("@Email", MySqlDbType.VarChar);
+            cmd.Parameters.Add("@Ativo", MySqlDbType.Bit);
+            cmd.Parameters.Add("@Usuario", MySqlDbType.Int32);
+            cmd.Parameters["@Nome"].Value = p.Nome;
+            cmd.Parameters["@Email"].Value = p.Email;
+            cmd.Parameters["@Ativo"].Value = p.Ativo;
+            cmd.Parameters["@Usuario"].Value = p.IdUsuario;
+            con.Open();
+            int rowsAffected = cmd.ExecuteNonQuery();
+            con.Close();
+            if (rowsAffected > 0)
+            {
+                return p.Id;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        public int Persistir(Professor p)
+        {
+            if (p.Id != 0)
+            {
+                return Atualizar(p);
+            }
+            else
+            {
+                return Salvar(p);
+            }
+        }
     }
 }

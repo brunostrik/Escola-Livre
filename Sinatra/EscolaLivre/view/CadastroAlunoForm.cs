@@ -36,13 +36,18 @@ namespace EscolaLivre.view
                 txtFoto.Text = string.Empty;
                 picFoto.Image = null;
                 txtUsuario.Text = string.Empty;
+                usuario = new Usuario();
+                usuario.Tipo = 1;
             }else //EDICAO
             {
                 txtNome.Text = aluno.Nome;
                 txtEmail.Text = aluno.Email;
                 txtCartao.Value = aluno.Cartao;
-                picFoto.Image = new ImagesDAO().CarregarAlunoFoto(aluno.Id);
-                this.usuario = new UsuarioDAO().Carregar(aluno.IdUsuario);
+                //Foto do aluno
+                ImagesDAO imgDao = new ImagesDAO();
+                aluno.Foto = imgDao.CarregarAlunoFoto(aluno.Id);
+                picFoto.Image = imgDao.ByteArray2Image(aluno.Foto);
+                usuario = new UsuarioDAO().Carregar(aluno.IdUsuario);
                 txtUsuario.Text = usuario.Username;
             }
         }
@@ -55,6 +60,7 @@ namespace EscolaLivre.view
             {
                 txtFoto.Text = ofd.FileName;
                 picFoto.Image = Image.FromFile(ofd.FileName);
+                aluno.Foto = new ImagesDAO().LoadBytesFromFile(ofd.FileName);
             }
         }
 
@@ -98,13 +104,49 @@ namespace EscolaLivre.view
                 return;
             }
             //OK, validou, agora é só adicionar na entidade
-            implementar aqui o resto;
-            
+            aluno.Nome = txtNome.Text;
+            aluno.Email = txtEmail.Text;
+            aluno.DataCadastro = DateTime.Now;
+            aluno.DataNascimento = dtpDataNasc.Value.Date;
+            aluno.Ativo = cmbAtivo.Text == "Ativo";
+            aluno.Cartao = Convert.ToInt32(txtCartao.Value);
+            //Foto já inserida na entidade na seleção da foto ou na ativação da entidade na preparar_tela
+            //Salvar o usuario
+            try
+            {
+                aluno.IdUsuario = new UsuarioDAO().Persistir(usuario);
+                if (aluno.IdUsuario == 0) throw new Exception("Retorno zero de função");
+            }
+            catch (Exception ex)
+            {
+                Util.Erro("Falha ao salvar usuário do aluno\n" + ex.Message);
+                return;
+            }
+            //Salvar o aluno
+            try
+            {
+                if (new AlunoDAO().Persistir(aluno) > 0) //NAO SALVOU EMAIL, DATA DE CADASTRO, NASCIMENTO NEM ID_USUARIO
+                {
+                    Util.Mensagem("Aluno " + aluno.Nome + " adicionado ao sistema");
+                    this.Close();
+                    return;
+                }
+                else
+                {
+                    throw new Exception("Retorno zero de função");
+                }
+            }
+            catch (Exception ex)
+            {
+                Util.Erro("Falha ao salvar aluno\n" + ex.Message);
+                try { new UsuarioDAO().Apagar(aluno.IdUsuario); } catch (Exception) { };
+                return;
+            }
         }
 
         private void btnConfigurarUsuario_Click(object sender, EventArgs e)
         {
-            Object[] prms = { usuario, this, 0 };
+            Object[] prms = { usuario, this, 1 };
             Util.AbreForm("CADASTROUSUARIOFORM", prms);
         }
 

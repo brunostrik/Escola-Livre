@@ -132,5 +132,37 @@ namespace EscolaLivre
             cmd.ExecuteNonQuery();
             con.Close();
         }
+        public int Atualizar(Usuario usuario)
+        {
+            MySqlConnection con = ConnectionManager.getConnection();
+            string CmdString = "UPDATE usuario SET (username = @Username, senha = @Senha) WHERE id = @Id";
+            MySqlCommand cmd = new MySqlCommand(CmdString, con);
+            cmd.Parameters.Add("@Senha", MySqlDbType.VarChar);
+            cmd.Parameters.Add("@Username", MySqlDbType.VarChar);
+            cmd.Parameters.Add("@Id", MySqlDbType.Int32);
+            cmd.Parameters["@Username"].Value = usuario.Username;
+            cmd.Parameters["@Senha"].Value = usuario.Senha;
+            cmd.Parameters["@Id"].Value = usuario.Id;
+            con.Open();
+            int rowsAffected = cmd.ExecuteNonQuery();
+            if (rowsAffected > 0)
+            {
+                return usuario.Id;
+            }else
+            {
+                return 0;
+            }
+        }
+        public int Persistir(Usuario usuario)
+        {
+            if (usuario.Id != 0)
+            {
+                return this.Atualizar(usuario);
+            }
+            else
+            {
+                return this.Salvar(usuario);
+            }
+        }
     }
 }

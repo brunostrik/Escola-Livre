@@ -89,19 +89,34 @@ namespace EscolaLivre.view
             professor.Email = txtEmail.Text;
             professor.Ativo = cmbAtivo.Text == "Ativo";
             //Salvar ou atualizar o usuario
-            professor.IdUsuario = new UsuarioDAO().Persistir(usuario); //Persistir é saveOrUpdate
-            if (professor.IdUsuario == 0)
+            try
             {
-                Util.Erro("Falha ao salvar o usuário do professor");
+                professor.IdUsuario = new UsuarioDAO().Persistir(usuario); //Persistir é saveOrUpdate
+                if (professor.IdUsuario == 0)
+                {
+                    throw new Exception("Retorno zero de função");
+                }
+            }
+            catch (Exception ex)
+            {
+                Util.Erro("Falha ao salvar o usuário do professor\n" + ex.Message);
                 return;
             }
-            if (new ProfessorDAO().Persistir(professor) > 0) //Persistir é saveOrUpdate
+            try
             {
-                Util.Mensagem("Professor " + professor.Nome + " adicionado ao sistema");
-                this.Close();
-            }else
+                if (new ProfessorDAO().Persistir(professor) > 0) //Persistir é saveOrUpdate
+                {
+                    Util.Mensagem("Professor " + professor.Nome + " adicionado ao sistema");
+                    this.Close();
+                }
+                else
+                {
+                    throw new Exception("Retorno zero de função");
+                }           
+            }
+            catch (Exception ex)
             {
-                Util.Erro("Falha ao salvar o professor");
+                Util.Erro("Falha ao salvar o professor\n" + ex.Message);
                 //Apagar o usuario restante, caso seja inserção de novo
                 if (professor.Id == 0)
                 {
@@ -109,6 +124,8 @@ namespace EscolaLivre.view
                 }
                 return;
             }
+            
+            
         }
 
         private void cmbAtivo_SelectedIndexChanged(object sender, EventArgs e)
