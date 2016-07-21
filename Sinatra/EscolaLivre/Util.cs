@@ -24,6 +24,7 @@ namespace EscolaLivre
         public static CadastroUsuarioForm cadastroUsuarioForm;
         public static CadastroProfessorForm cadastroProfessorForm;
         public static CadastroAlunoForm cadastroAlunoForm;
+        public static CadastroEpocaForm cadastroEpocaForm;
 
         public static void AbreForm(string nome, object[] parametros = null)
         {
@@ -44,6 +45,10 @@ namespace EscolaLivre
                 case "CADASTROALUNOFORM":
                     cadastroAlunoForm = new CadastroAlunoForm((Aluno)parametros[0]);
                     cadastroAlunoForm.ShowDialog();
+                    break;
+                case "CADASTROEPOCAFORM":
+                    cadastroEpocaForm = new CadastroEpocaForm((Epoca)parametros[0]);
+                    cadastroEpocaForm.ShowDialog();
                     break;
             }
         }

@@ -13,3 +13,4 @@ C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\Esc
 C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\EscolaLivre\obj\Debug\EscolaLivre.view.CadastroProfessorForm.resources
 C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\EscolaLivre\obj\Debug\EscolaLivre.view.CadastroUsuarioForm.resources
 C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\EscolaLivre\obj\Debug\EscolaLivre.view.CadastroAlunoForm.resources
+C:\Users\Bruno Strik\Documents\GitHub\Repo Escola-Livre\Escola-Livre\Sinatra\EscolaLivre\obj\Debug\EscolaLivre.view.CadastroEpocaForm.resources

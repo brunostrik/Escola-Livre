@@ -98,6 +98,12 @@
     <Compile Include="view\CadastroAlunoForm.Designer.cs">
       <DependentUpon>CadastroAlunoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\CadastroEpocaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\CadastroEpocaForm.Designer.cs">
+      <DependentUpon>CadastroEpocaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\CadastroProfessorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </Compile>
     <EmbeddedResource Include="view\CadastroAlunoForm.resx">
       <DependentUpon>CadastroAlunoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\CadastroEpocaForm.resx">
+      <DependentUpon>CadastroEpocaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\CadastroProfessorForm.resx">
       <DependentUpon>CadastroProfessorForm.cs</DependentUpon>

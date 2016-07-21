@@ -108,6 +108,7 @@ namespace EscolaLivre
             MySqlCommand cmd = new MySqlCommand(CmdString, con);
             cmd.Parameters.Add("@IdUsuario", MySqlDbType.Int32);
             cmd.Parameters["@IdUsuario"].Value = idUsuario;
+            con.Open();
             MySqlDataReader rs = cmd.ExecuteReader();
             Aluno a = null;
             if (rs.Read())

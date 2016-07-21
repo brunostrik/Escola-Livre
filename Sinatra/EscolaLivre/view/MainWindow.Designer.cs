@@ -34,12 +34,26 @@
             this.matrículasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.memoriaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verMemoriaisSalvosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adicionarNovoMemorialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chamadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarMinhaFrequênciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarChamadaQueEsqueciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarFaltaJustificadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.professoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.intervençõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verIntervençõesRegistradasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verIntervençõesAindaSemRegistroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrosDeAlunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verRegistrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adicionarNovoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calendáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verCalendáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adicionarUmNovoToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.diasSemAulaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verDiasSemAulaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adicionarUmNovoToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alunosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,20 +66,6 @@
             this.adicionarUmNovoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.opçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trocarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verCalendáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adicionarUmNovoToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.diasSemAulaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verDiasSemAulaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adicionarUmNovoToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.verRegistrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adicionarNovoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verIntervençõesRegistradasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verIntervençõesAindaSemRegistroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verMemoriaisSalvosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adicionarNovoMemorialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarMinhaFrequênciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarChamadaQueEsqueciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarFaltaJustificadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,7 +96,7 @@
             // matrículasToolStripMenuItem
             // 
             this.matrículasToolStripMenuItem.Name = "matrículasToolStripMenuItem";
-            this.matrículasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.matrículasToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.matrículasToolStripMenuItem.Text = "Matrículas";
             // 
             // alunosToolStripMenuItem
@@ -114,8 +114,20 @@
             this.verMemoriaisSalvosToolStripMenuItem,
             this.adicionarNovoMemorialToolStripMenuItem});
             this.memoriaisToolStripMenuItem.Name = "memoriaisToolStripMenuItem";
-            this.memoriaisToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.memoriaisToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.memoriaisToolStripMenuItem.Text = "Memoriais";
+            // 
+            // verMemoriaisSalvosToolStripMenuItem
+            // 
+            this.verMemoriaisSalvosToolStripMenuItem.Name = "verMemoriaisSalvosToolStripMenuItem";
+            this.verMemoriaisSalvosToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.verMemoriaisSalvosToolStripMenuItem.Text = "Ver memoriais salvos";
+            // 
+            // adicionarNovoMemorialToolStripMenuItem
+            // 
+            this.adicionarNovoMemorialToolStripMenuItem.Name = "adicionarNovoMemorialToolStripMenuItem";
+            this.adicionarNovoMemorialToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.adicionarNovoMemorialToolStripMenuItem.Text = "Adicionar novo memorial";
             // 
             // chamadaToolStripMenuItem
             // 
@@ -124,8 +136,26 @@
             this.registrarChamadaQueEsqueciToolStripMenuItem,
             this.registrarFaltaJustificadaToolStripMenuItem});
             this.chamadaToolStripMenuItem.Name = "chamadaToolStripMenuItem";
-            this.chamadaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.chamadaToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.chamadaToolStripMenuItem.Text = "Chamada";
+            // 
+            // consultarMinhaFrequênciaToolStripMenuItem
+            // 
+            this.consultarMinhaFrequênciaToolStripMenuItem.Name = "consultarMinhaFrequênciaToolStripMenuItem";
+            this.consultarMinhaFrequênciaToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
+            this.consultarMinhaFrequênciaToolStripMenuItem.Text = "Consultar minha frequência";
+            // 
+            // registrarChamadaQueEsqueciToolStripMenuItem
+            // 
+            this.registrarChamadaQueEsqueciToolStripMenuItem.Name = "registrarChamadaQueEsqueciToolStripMenuItem";
+            this.registrarChamadaQueEsqueciToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
+            this.registrarChamadaQueEsqueciToolStripMenuItem.Text = "Registrar chamada que esqueci";
+            // 
+            // registrarFaltaJustificadaToolStripMenuItem
+            // 
+            this.registrarFaltaJustificadaToolStripMenuItem.Name = "registrarFaltaJustificadaToolStripMenuItem";
+            this.registrarFaltaJustificadaToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
+            this.registrarFaltaJustificadaToolStripMenuItem.Text = "Registrar falta justificada";
             // 
             // professoresToolStripMenuItem
             // 
@@ -145,6 +175,18 @@
             this.intervençõesToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.intervençõesToolStripMenuItem.Text = "Minhas intervenções";
             // 
+            // verIntervençõesRegistradasToolStripMenuItem
+            // 
+            this.verIntervençõesRegistradasToolStripMenuItem.Name = "verIntervençõesRegistradasToolStripMenuItem";
+            this.verIntervençõesRegistradasToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.verIntervençõesRegistradasToolStripMenuItem.Text = "Ver intervenções já registradas";
+            // 
+            // verIntervençõesAindaSemRegistroToolStripMenuItem
+            // 
+            this.verIntervençõesAindaSemRegistroToolStripMenuItem.Name = "verIntervençõesAindaSemRegistroToolStripMenuItem";
+            this.verIntervençõesAindaSemRegistroToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.verIntervençõesAindaSemRegistroToolStripMenuItem.Text = "Adicionar nova";
+            // 
             // registrosDeAlunosToolStripMenuItem
             // 
             this.registrosDeAlunosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -153,6 +195,18 @@
             this.registrosDeAlunosToolStripMenuItem.Name = "registrosDeAlunosToolStripMenuItem";
             this.registrosDeAlunosToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.registrosDeAlunosToolStripMenuItem.Text = "Registros de Alunos";
+            // 
+            // verRegistrosToolStripMenuItem
+            // 
+            this.verRegistrosToolStripMenuItem.Name = "verRegistrosToolStripMenuItem";
+            this.verRegistrosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.verRegistrosToolStripMenuItem.Text = "Ver registros";
+            // 
+            // adicionarNovoToolStripMenuItem
+            // 
+            this.adicionarNovoToolStripMenuItem.Name = "adicionarNovoToolStripMenuItem";
+            this.adicionarNovoToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.adicionarNovoToolStripMenuItem.Text = "Adicionar novo";
             // 
             // configuraçõesToolStripMenuItem
             // 
@@ -171,6 +225,40 @@
             this.calendáriosToolStripMenuItem.Name = "calendáriosToolStripMenuItem";
             this.calendáriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.calendáriosToolStripMenuItem.Text = "Calendários";
+            // 
+            // verCalendáriosToolStripMenuItem
+            // 
+            this.verCalendáriosToolStripMenuItem.Name = "verCalendáriosToolStripMenuItem";
+            this.verCalendáriosToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.verCalendáriosToolStripMenuItem.Text = "Ver calendários";
+            // 
+            // adicionarUmNovoToolStripMenuItem3
+            // 
+            this.adicionarUmNovoToolStripMenuItem3.Name = "adicionarUmNovoToolStripMenuItem3";
+            this.adicionarUmNovoToolStripMenuItem3.Size = new System.Drawing.Size(176, 22);
+            this.adicionarUmNovoToolStripMenuItem3.Text = "Adicionar um novo";
+            this.adicionarUmNovoToolStripMenuItem3.Click += new System.EventHandler(this.adicionarUmNovoToolStripMenuItem3_Click);
+            // 
+            // diasSemAulaToolStripMenuItem
+            // 
+            this.diasSemAulaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.verDiasSemAulaToolStripMenuItem,
+            this.adicionarUmNovoToolStripMenuItem4});
+            this.diasSemAulaToolStripMenuItem.Name = "diasSemAulaToolStripMenuItem";
+            this.diasSemAulaToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.diasSemAulaToolStripMenuItem.Text = "Dias sem aula";
+            // 
+            // verDiasSemAulaToolStripMenuItem
+            // 
+            this.verDiasSemAulaToolStripMenuItem.Name = "verDiasSemAulaToolStripMenuItem";
+            this.verDiasSemAulaToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.verDiasSemAulaToolStripMenuItem.Text = "Ver dias sem aula";
+            // 
+            // adicionarUmNovoToolStripMenuItem4
+            // 
+            this.adicionarUmNovoToolStripMenuItem4.Name = "adicionarUmNovoToolStripMenuItem4";
+            this.adicionarUmNovoToolStripMenuItem4.Size = new System.Drawing.Size(176, 22);
+            this.adicionarUmNovoToolStripMenuItem4.Text = "Adicionar um novo";
             // 
             // cadastrosToolStripMenuItem
             // 
@@ -264,98 +352,11 @@
             this.trocarSenhaToolStripMenuItem.Text = "Trocar Senha";
             this.trocarSenhaToolStripMenuItem.Click += new System.EventHandler(this.trocarSenhaToolStripMenuItem_Click);
             // 
-            // verCalendáriosToolStripMenuItem
-            // 
-            this.verCalendáriosToolStripMenuItem.Name = "verCalendáriosToolStripMenuItem";
-            this.verCalendáriosToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.verCalendáriosToolStripMenuItem.Text = "Ver calendários";
-            // 
-            // adicionarUmNovoToolStripMenuItem3
-            // 
-            this.adicionarUmNovoToolStripMenuItem3.Name = "adicionarUmNovoToolStripMenuItem3";
-            this.adicionarUmNovoToolStripMenuItem3.Size = new System.Drawing.Size(176, 22);
-            this.adicionarUmNovoToolStripMenuItem3.Text = "Adicionar um novo";
-            // 
-            // diasSemAulaToolStripMenuItem
-            // 
-            this.diasSemAulaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.verDiasSemAulaToolStripMenuItem,
-            this.adicionarUmNovoToolStripMenuItem4});
-            this.diasSemAulaToolStripMenuItem.Name = "diasSemAulaToolStripMenuItem";
-            this.diasSemAulaToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.diasSemAulaToolStripMenuItem.Text = "Dias sem aula";
-            // 
-            // verDiasSemAulaToolStripMenuItem
-            // 
-            this.verDiasSemAulaToolStripMenuItem.Name = "verDiasSemAulaToolStripMenuItem";
-            this.verDiasSemAulaToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.verDiasSemAulaToolStripMenuItem.Text = "Ver dias sem aula";
-            // 
-            // adicionarUmNovoToolStripMenuItem4
-            // 
-            this.adicionarUmNovoToolStripMenuItem4.Name = "adicionarUmNovoToolStripMenuItem4";
-            this.adicionarUmNovoToolStripMenuItem4.Size = new System.Drawing.Size(176, 22);
-            this.adicionarUmNovoToolStripMenuItem4.Text = "Adicionar um novo";
-            // 
-            // verRegistrosToolStripMenuItem
-            // 
-            this.verRegistrosToolStripMenuItem.Name = "verRegistrosToolStripMenuItem";
-            this.verRegistrosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.verRegistrosToolStripMenuItem.Text = "Ver registros";
-            // 
-            // adicionarNovoToolStripMenuItem
-            // 
-            this.adicionarNovoToolStripMenuItem.Name = "adicionarNovoToolStripMenuItem";
-            this.adicionarNovoToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.adicionarNovoToolStripMenuItem.Text = "Adicionar novo";
-            // 
-            // verIntervençõesRegistradasToolStripMenuItem
-            // 
-            this.verIntervençõesRegistradasToolStripMenuItem.Name = "verIntervençõesRegistradasToolStripMenuItem";
-            this.verIntervençõesRegistradasToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.verIntervençõesRegistradasToolStripMenuItem.Text = "Ver intervenções já registradas";
-            // 
-            // verIntervençõesAindaSemRegistroToolStripMenuItem
-            // 
-            this.verIntervençõesAindaSemRegistroToolStripMenuItem.Name = "verIntervençõesAindaSemRegistroToolStripMenuItem";
-            this.verIntervençõesAindaSemRegistroToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.verIntervençõesAindaSemRegistroToolStripMenuItem.Text = "Adicionar nova";
-            // 
-            // verMemoriaisSalvosToolStripMenuItem
-            // 
-            this.verMemoriaisSalvosToolStripMenuItem.Name = "verMemoriaisSalvosToolStripMenuItem";
-            this.verMemoriaisSalvosToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.verMemoriaisSalvosToolStripMenuItem.Text = "Ver memoriais salvos";
-            // 
-            // adicionarNovoMemorialToolStripMenuItem
-            // 
-            this.adicionarNovoMemorialToolStripMenuItem.Name = "adicionarNovoMemorialToolStripMenuItem";
-            this.adicionarNovoMemorialToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.adicionarNovoMemorialToolStripMenuItem.Text = "Adicionar novo memorial";
-            // 
-            // consultarMinhaFrequênciaToolStripMenuItem
-            // 
-            this.consultarMinhaFrequênciaToolStripMenuItem.Name = "consultarMinhaFrequênciaToolStripMenuItem";
-            this.consultarMinhaFrequênciaToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
-            this.consultarMinhaFrequênciaToolStripMenuItem.Text = "Consultar minha frequência";
-            // 
-            // registrarChamadaQueEsqueciToolStripMenuItem
-            // 
-            this.registrarChamadaQueEsqueciToolStripMenuItem.Name = "registrarChamadaQueEsqueciToolStripMenuItem";
-            this.registrarChamadaQueEsqueciToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
-            this.registrarChamadaQueEsqueciToolStripMenuItem.Text = "Registrar chamada que esqueci";
-            // 
-            // registrarFaltaJustificadaToolStripMenuItem
-            // 
-            this.registrarFaltaJustificadaToolStripMenuItem.Name = "registrarFaltaJustificadaToolStripMenuItem";
-            this.registrarFaltaJustificadaToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
-            this.registrarFaltaJustificadaToolStripMenuItem.Text = "Registrar falta justificada";
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 319);
+            this.ClientSize = new System.Drawing.Size(900, 388);
             this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;

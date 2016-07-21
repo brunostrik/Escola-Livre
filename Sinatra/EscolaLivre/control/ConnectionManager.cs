@@ -24,5 +24,22 @@ namespace EscolaLivre
             }
             return connection;
         }
+        public static bool TestConnection()
+        {
+            try
+            {
+                MySqlConnection con = ConnectionManager.getConnection();
+                string CmdString = "SELECT 1+1";
+                MySqlCommand cmd = new MySqlCommand(CmdString, con);
+                con.Open();
+                MySqlDataReader rs = cmd.ExecuteReader();
+                con.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

@@ -20,6 +20,12 @@ namespace EscolaLivre.view
         private void MainWindow_Load(object sender, EventArgs e)
         {
             menuStrip.Enabled = false;
+            //testa o banco de dados
+            if (!ConnectionManager.TestConnection())
+            {
+                Util.Mensagem("Falha ao conectar ao banco de dados. Verifique se sua conexão está correta na rede do IFPR. Se o problema persistir contate o CPGTIC.");
+                Application.Exit();
+            }
             //Chama o login
             Util.AbreLogin();
         }
@@ -98,6 +104,12 @@ namespace EscolaLivre.view
         private void projetosToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void adicionarUmNovoToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            object[] prms = { new Epoca() };
+            Util.AbreForm("CADASTROEPOCAFORM", prms);
         }
     }
 }
